@@ -1,0 +1,119 @@
+@import 'design.css';
+
+:root{
+    /* font */
+    --font-primary: 'Inter', sans-serif;
+
+    /* backgrounds */
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFFFFF;
+
+    /* contrast */
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    /* contents */
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    /* borders */
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    /* shadows */
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-bg-focus: rgb(244, 245, 251);
+    --shadow-focus: rgb(202, 56, 132);
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+input:focus,
+button:focus{
+    outline: none;
+}
+
+body{
+    background-color: var(--background-primary);
+    font-family: var(--font-primary);
+    min-height: 100vh;
+}
+
+main{
+    max-width: 630px;
+    margin: 0 auto;
+}
+
+a{
+    font-family: var(--font-primary);
+}
+
+/* css utility */
+
+.title{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.label{
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+.input{
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+}
+
+.text{
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.link{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+
+    color: var(--color-brand);
+    transition: 0.1s ease-in;
+}
+
+.link:hover{
+    color: var(--color-brand-hover);
+}
+
+@media (min-width: 480px){
+
+}
+
+@media(min-width: 768px){
+
+}
+
+@media(min-width: 1024px){
+
+}
+
+@media(min-width: 1240px){
+
+}

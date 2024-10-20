@@ -1,0 +1,172 @@
+/* header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.header img{
+    width: 150px;
+    height: 40px;
+}
+
+/* main */
+.main{
+    padding: 25px;
+}
+
+.main h1{
+    margin: 16px 0 0 0;
+
+    color: var(--content-primary);
+}
+
+.main__add-purchase{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.main__add-purchase input{
+    flex: 2 0 0;
+    height: 40px;
+    padding: 10px 18px;
+
+    border-radius: 12px;
+    border: 2px solid var(--border-primary);
+    background-color: var(--background-secondary);
+    color: var(--content-primary);
+
+    box-shadow: 0 1px 2px var(--shadow);
+    transition: 0.1s ease-in;
+}
+
+.main__add-purchase input:hover{
+    border: 2px solid var(--border-hover);
+}
+
+.main__add-purchase input:focus,
+.main__add-purchase input:active{
+    border: 2px solid var(--color-brand);
+}
+
+.main__add-purchase input::placeholder{
+    color: var(--content-tertiary);
+}
+
+.main__add-purchase button{
+    flex: 1 0 0;
+    padding: 12px 24px;
+    white-space: nowrap;
+    
+    background-color: var(--color-brand);
+    color: var(--always-white);
+    border-radius: 12px;
+
+    box-shadow: 0 1px 2px var(--shadow);
+    cursor: pointer;
+
+    transition: 0.1s ease-in;
+}
+
+.main__add-purchase button:hover{
+    background-color: var(--color-brand-hover);
+}
+
+.main__add-purchase button:focus{
+    box-shadow: 
+    0 0 0 2px var(--shadow-bg-focus),
+    0 0 0 4px var(--shadow-focus);
+}
+
+/* container purchase */
+.main__container{
+    width: 100%;
+    height: 100%;
+    max-height: 232px;
+}
+
+.container__purchase{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+
+    border-radius: 12px;
+    background-color: var(--background-secondary);
+
+    box-shadow: 0 1px 2px var(--shadow);
+    cursor: pointer;
+}
+
+.container__purchase div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--content-secondary);
+}
+
+.container__purchase input[type="checkbox"]{
+    accent-color: var(--color-brand);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+}
+
+.container__purchase input[type="checkbox"]:hover{
+    border: 1px solid var(--border-hover);
+}
+
+.container__purchase img{
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+.main__notification{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    margin: 40px 0 0 0;
+
+    border-radius: 12px;
+    background-color: var(--color-danger);
+
+    box-shadow: 0 1px 2px var(--shadow);
+}
+
+.main__notification div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--always-white);
+}
+
+.main__notification div img{
+    width: 20px;
+    height: 20px;
+}
+
+.main__notification > img{
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+    /* main */
+    .main__add-purchase{
+        flex-wrap: no-wrap;
+    }
+}
