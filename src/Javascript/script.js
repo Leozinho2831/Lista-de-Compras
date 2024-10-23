@@ -1,8 +1,18 @@
-const formButton = document.querySelector('.js-buttonAddItem');
+const formButton = 
+    document.querySelector('.js-buttonAddItem');
 
 const notificationContainer = 
-document.querySelector('.js-notificationDelete');
+    document.querySelector('.js-notificationDelete');
 const classNotification = 'js-activeNotification';
+
+const sectionItemsList = 
+    document.querySelector('.js-containerPurchase');
+
+const itemsListStorage = localStorage.getItem('sectionItemsList');
+
+if(itemsListStorage){
+    sectionItemsList.innerHTML = itemsListStorage;
+}
 
 function notificationDelete(event){
     const closeNotification = event.target;
@@ -18,6 +28,7 @@ function deletePurchase(event){
     
     if(itemRemove){
         itemRemove.parentElement.remove();
+        localStorage.setItem('sectionItemsList', sectionItemsList.innerHTML);
     }
 
     if(notificationContainer){
@@ -36,8 +47,6 @@ function deletePurchase(event){
 function createListItem(){
     const inputAddItem = 
         document.querySelector('.js-inputPurchase');
-    const sectionItemsList = 
-        document.querySelector('.js-containerPurchase');
 
     const purchaseNew = 
     `
@@ -56,6 +65,8 @@ function createListItem(){
         sectionItemsList.insertAdjacentHTML('afterbegin', purchaseNew);
 
         inputAddItem.value = '';
+
+        localStorage.setItem('sectionItemsList', sectionItemsList.innerHTML);
     } else {
         alert('coloque um valor no input');
     }
