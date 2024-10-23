@@ -21,29 +21,22 @@
         <h1 class="title">Compras da semana</h1>
         <form class="main__add-purchase">
             <input 
-                class="input" 
+                class="input js-inputPurchase" 
                 type="text" 
                 placeholder="Adicione um novo item"
             >
-            <button type="button" class="label">Adicionar item</button>
+            <button type="button" class="label js-buttonAddItem">Adicionar item</button>
         </form>
-        <section class="main__container">
-                <label class="container__purchase">
-                    <div>
-                        <input type="checkbox">
-                        <p class="text">Pão de forma</p>
-                    </div>
-                    <figure>
-                        <img src="src/Images/Trash.svg" alt="Deletar">
-                    </figure>
-                </label>
+        <section class="main__container js-containerPurchase">
+
         </section>
-        <aside class="main__notification">
+        <aside class="main__notification js-notificationDelete">
             <div>
                 <img src="src/Images/Warning.svg" alt="Aviso!">
                 <p class="label">O item foi removido da lista</p>
             </div>
-            <img src="src/Images/Delete.svg" alt="Fechar">
+            <img src="src/Images/Delete.svg" alt="Fechar" 
+            onclick="notificationDelete(event)">
         </aside>
     </main>
     <script src="src/Javascript/script.js"></script>
